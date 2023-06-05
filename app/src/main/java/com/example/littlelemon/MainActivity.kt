@@ -106,7 +106,6 @@ class MainActivity : ComponentActivity() {
     }
 
     private suspend fun fetchMenu(): List<MenuItemNetwork> {
-
         val response = httpClient
             .get(URL)
             .body<MenuNetwork>()
@@ -119,7 +118,8 @@ class MainActivity : ComponentActivity() {
     }
 
     companion object {
-        const val URL = "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/littleLemonSimpleMenu.json"
+        const val URL =
+            "https://raw.githubusercontent.com/Meta-Mobile-Developer-PC/Working-With-Data-API/main/littleLemonSimpleMenu.json"
     }
 }
 
